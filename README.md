@@ -2,7 +2,7 @@
 A multi cycle RISC-V CPU Core using Verilog
 
 ## Abstract
-This paper explores the design and implementation of a multi-cycle CPU based on the RISC-V instruction set architecture. Multi-cycle CPUs offer a balance between performance and complexity, making them a compelling choice for various computing applications. Leveraging the simplicity and efficiency of the RISC-V instruction set, our design aims to optimize critical path length while ensuring efficient execution of instructions. Through detailed analysis and simulation, we evaluate the performance and efficiency of the proposed multi-cycle CPU architecture. Our findings underscore the viability and effectiveness of RISC-V in facilitating the development of high-performance processors for diverse computing environments.
+This project explores the design and implementation of a multi-cycle CPU based on the RISC-V instruction set architecture. Multi-cycle CPUs offer a balance between performance and complexity, making them a compelling choice for various computing applications. Leveraging the simplicity and efficiency of the RISC-V instruction set, our design aims to optimize critical path length while ensuring efficient execution of instructions. Through detailed analysis and simulation, we evaluate the performance and efficiency of the proposed multi-cycle CPU architecture. Our findings underscore the viability and effectiveness of RISC-V in facilitating the development of high-performance processors for diverse computing environments.
 
 ![image](https://raw.githubusercontent.com/vanngo411/MultiCycle_CPU_RISCV/main/Block%20Diagram.png)
 
