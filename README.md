@@ -14,14 +14,14 @@ Within the RICSV_TOP module, the forwarding module plays a critical role in enha
 
 Conversely, the hazard detection module serves as a safeguard against potential hazards that could disrupt the orderly execution of instructions. It detects hazards arising from dependencies between instructions, such as data hazards and control hazards, and takes appropriate actions to resolve them. Data hazards occur when instructions depend on data produced by preceding instructions that have not yet completed execution. In such cases, the hazard detection module stalls the pipeline or initiates forwarding to ensure that instructions receive the correct data. Control hazards arise from branch instructions that alter the program counter, potentially causing incorrect instruction fetching. The hazard detection module detects these hazards and manages the control flow to maintain program correctness. By identifying and addressing hazards in real-time, the hazard detection module ensures smooth and uninterrupted execution of instructions within the RICSV_TOP module, contributing to overall system reliability and efficiency.
 
-![image](https://github.com/vanngo411/RISC_V/blob/main/Screenshot%202024-03-01%20164305.png)
+![image](https://github.com/vanngo411/MultiCycle_CPU_RISCV/blob/main/DataAndControlPath.png)
 
 ## ModelSim Output Waveform
-![image](https://github.com/vanngo411/RISC_V/blob/main/Screenshot%202024-03-01%20163710.png)
+![image]()
 
 In the first test case, we execute an "add" instruction to add the value in register x25 to itself and store the result in register x10. This operation is followed immediately by another identical "add" instruction. Since the result of the first instruction is not yet written back to register x10, the forwarding module detects the data dependency and forwards the result directly from the ALU output of the first instruction to the ALU input of the second instruction. As a result, the second instruction can execute without waiting for the write-back stage of the first instruction, leading to efficient execution.
 
-![image](https://github.com/vanngo411/RISC_V/blob/main/Screenshot%202024-03-01%20163710.png)
+![image]()
 
 In the second test case, we execute an "lw" (load word) instruction to load a value from memory into register x2, followed by an "add" instruction to add the value in register x5 to the value in register x10 and store the result in register x10. Again, the forwarding module detects the data dependency between the "lw" instruction and the subsequent "add" instruction and forwards the correct data to the ALU input of the "add" instruction, allowing it to execute without stalling. This efficient handling of data dependencies results in smooth instruction execution and improved performance.  The hazard detection module ensures proper sequencing of instructions despite the data dependencies between the "lw" and "add" instructions. By detecting the dependency and stalling the subsequent instruction until the data is available, the hazard detection module guarantees the correctness of instruction execution.
 
